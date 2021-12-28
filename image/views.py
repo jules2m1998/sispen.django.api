@@ -1,22 +1,19 @@
 from rest_framework import generics, mixins
-from .models import FAQ
-from .serializers import FAQSerializer
+from .models import Image
+from .serializers import ImageSerializer
+
 
 # Create your views here.
+queryset = Image.objects.all()
 
 
-queryset = FAQ.objects.all()
-
-
-class FAQAPIView(
-    mixins.ListModelMixin,
+class ImageAPIView(
     mixins.CreateModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.DestroyModelMixin,
+    mixins.ListModelMixin,
     generics.GenericAPIView
 ):
     queryset = queryset
-    serializer_class = FAQSerializer
+    serializer_class = ImageSerializer
     lookup_field = 'id'
 
     def get(self, request):
@@ -26,16 +23,14 @@ class FAQAPIView(
         return self.create(request)
 
 
-class FAQDetailAPIView(
-    mixins.ListModelMixin,
+class ImageDetailAPIView(
     mixins.RetrieveModelMixin,
-    mixins.CreateModelMixin,
     mixins.UpdateModelMixin,
     mixins.DestroyModelMixin,
     generics.GenericAPIView
 ):
     queryset = queryset
-    serializer_class = FAQSerializer
+    serializer_class = ImageSerializer
     lookup_field = 'id'
 
     def get(self, request, id=None):
