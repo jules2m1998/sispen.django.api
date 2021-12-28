@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'faq',
     'image',
     'description',
-    'util'
+    'util',
+    'partner',
 ]
 
 MIDDLEWARE = [

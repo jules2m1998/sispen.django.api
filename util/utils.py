@@ -1,10 +1,4 @@
-from django.db import models
 from rest_framework import mixins, generics
-
-
-class DefaultModel:
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
 
 class APIView(

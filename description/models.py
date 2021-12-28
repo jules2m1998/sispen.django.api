@@ -1,12 +1,12 @@
 from django.db import models
-from util.utils import DefaultModel
 
 
 # Create your models here.
-class Description(DefaultModel, models.Model):
-    id = models.BigAutoField(primary_key=True)
+class Description(models.Model):
     fr = models.CharField(max_length=254, null=False)
     en = models.CharField(max_length=254, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'description'
