@@ -43,6 +43,13 @@ INSTALLED_APPS = [
     'user',
     'faq',
     'image',
+    'description',
+    'util',
+    'partner',
+    'service',
+    'contact',
+    'cotation_type',
+    'cotation',
 ]
 
 MIDDLEWARE = [

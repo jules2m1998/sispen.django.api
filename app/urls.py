@@ -21,4 +21,10 @@ urlpatterns = [
     # path('api_basic/', include('api_basic.urls')),
     path('faq/', include('faq.urls')),
     path('img/', include('image.urls')),
+    path('description/', include('description.urls')),
+    path('partner/', include('partner.urls')),
+    path('service/', include('service.urls')),
+    path('contact/', include('contact.urls')),
+    path('cotation_type/', include('cotation_type.urls')),
+    path('cotation/', include('cotation.urls')),
 ]
