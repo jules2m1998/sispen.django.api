@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'partner',
     'service',
     'contact',
+    'cotation_type',
+    'cotation',
 ]
 
 MIDDLEWARE = [
